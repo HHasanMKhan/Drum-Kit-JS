@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>DrumKit</title>
+  </head>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #dee6e9;
+      cursor: default;
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .sound {
+      font-size: 16px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 33vh;
+      padding: 70px 10px;
+    }
+
+    .box {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: black solid 4px;
+      font-size: 60px;
+      width: 300px;
+      height: 200px;
+      text-align: center;
+      transition: all ease-in-out 200ms;
+    }
+
+    .border {
+      border: black solid 2px;
+    }
+
+    span {
+      display: block;
+    }
+
+    .playing {
+      transform: scale(1.2);
+      background-color: black;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <div class="keys">
+      <div class="row">
+        <div data-key="65" class="box">
+          <div>
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+          </div>
+        </div>
+        <div data-key="83" class="box">
+          <div>
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+          </div>
+        </div>
+        <div data-key="68" class="box">
+          <div>
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div data-key="70" class="box">
+          <div>
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+          </div>
+        </div>
+        <div data-key="71" class="box">
+          <div>
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+          </div>
+        </div>
+        <div data-key="72" class="box">
+          <div>
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div data-key="74" class="box">
+          <div>
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+          </div>
+        </div>
+        <div data-key="75" class="box">
+          <div>
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+          </div>
+        </div>
+        <div data-key="76" class="box">
+          <div>
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio data-key="65" src="sounds/clap.wav"></audio>
+    <audio data-key="83" src="sounds/hihat.wav"></audio>
+    <audio data-key="68" src="sounds/kick.wav"></audio>
+    <audio data-key="70" src="sounds/openhat.wav"></audio>
+    <audio data-key="71" src="sounds/boom.wav"></audio>
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/snare.wav"></audio>
+    <audio data-key="75" src="sounds/tom.wav"></audio>
+    <audio data-key="76" src="sounds/tink.wav"></audio>
+
+    <!-- <div class="row">
+        <div class="box" id="clap" onclick="clap()">CLAP</div>
+        <div class="box" id="kick" onclick="kick()">KICK</div>
+        <div class="box" id="tink" onclick="tink()">TINK</div>
+    </div>
+    <div class="row">
+        <div class="box" id="tom" onclick="tom()">TOM</div>
+        <div class="box" id="boom" onclick="boom()">BOOM</div>
+        <div class="box" id="hihat" onclick="hihat()">HIHAT</div>
+    </div>
+    <div class="row">
+        <div class="box" id="openhat" onclick="openhat()">OPENHAT</div>
+        <div class="box" id="snare" onclick="snare()">SNARE</div>
+        <div class="box" id="ride" onclick="ride()">RIDE</div>
+    </div> -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
